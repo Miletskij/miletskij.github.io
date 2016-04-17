@@ -1,0 +1,541 @@
+/* line 3, ../sass/main.sass */
+html.js .loader {
+  background: none repeat scroll 0 0 #ffffff;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+/* line 13, ../sass/main.sass */
+html.js .loader .loader_inner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
+/* line 26, ../sass/main.sass */
+body {
+  font-family: "RobotoRegular", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  min-width: 320px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background-color: #33395c !important;
+}
+
+/* line 37, ../sass/main.sass */
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+  color: red;
+}
+
+/* line 40, ../sass/main.sass */
+body input:required:valid,
+body textarea:required:valid {
+  color: green;
+}
+
+/* line 61, ../sass/main.sass */
+.hidden {
+  display: none;
+}
+
+/* line 65, ../sass/main.sass */
+.logo {
+  width: 100%;
+  height: 42px;
+  background: url("../img/logo.png") no-repeat;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+/* line 73, ../sass/main.sass */
+.menu {
+  width: 40px;
+  height: 50px;
+  position: absolute;
+  top: 25px;
+  right: 2%;
+  z-index: 100;
+}
+
+/* line 81, ../sass/main.sass */
+.menu:hover {
+  cursor: pointer;
+}
+
+/* line 84, ../sass/main.sass */
+.menu.open .menu-item {
+  background: #b0b3c4;
+}
+
+/* line 87, ../sass/main.sass */
+.menu.open .menu-item:first-child {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-transform-origin: 10px 50%;
+  -ms-transform-origin: 10px 50%;
+  -webkit-transform-origin: 10px 50%;
+  transform-origin: 10px 50%;
+}
+
+/* line 97, ../sass/main.sass */
+.menu.open .menu-item:nth-child(2) {
+  opacity: 0;
+}
+
+/* line 100, ../sass/main.sass */
+.menu.open .menu-item:nth-child(3) {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -moz-transform-origin: 8px 50%;
+  -ms-transform-origin: 8px 50%;
+  -webkit-transform-origin: 8px 50%;
+  transform-origin: 8px 50%;
+}
+
+/* line 111, ../sass/main.sass */
+.menu-item {
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin: 0 0 5px;
+  background: #b0b3c4;
+}
+
+/* line 126, ../sass/main.sass */
+.menu_inner {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+/* line 135, ../sass/main.sass */
+.menu_inner ul {
+  list-style: none;
+  position: absolute;
+  top: 30%;
+  left: 43%;
+}
+/* line 140, ../sass/main.sass */
+.menu_inner ul li {
+  margin-top: 20px;
+}
+/* line 142, ../sass/main.sass */
+.menu_inner ul li a {
+  text-decoration: none;
+  color: #b0b3c4;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+/* line 147, ../sass/main.sass */
+.menu_inner ul li a:hover {
+  color: #d95d4d;
+}
+
+/* line 150, ../sass/main.sass */
+.modern_twist {
+  width: 100%;
+  min-height: 500px;
+  background: url("../img/eggs.png") no-repeat #0cc4d9;
+  color: #fff;
+  text-align: right;
+  padding: 40px;
+  background-size: cover;
+}
+/* line 158, ../sass/main.sass */
+.modern_twist h2 {
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 70px;
+}
+/* line 162, ../sass/main.sass */
+.modern_twist p {
+  font-size: 22px;
+}
+/* line 164, ../sass/main.sass */
+.modern_twist button {
+  background-color: #e9d036;
+  border: 1px solid transparent;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 172, ../sass/main.sass */
+.modern_twist button:hover {
+  background-color: #72c8e6;
+}
+
+/* line 175, ../sass/main.sass */
+.pumpkin {
+  width: 100%;
+  min-height: 814px;
+  background: url("../img/pumpkin.png") no-repeat #0cc4d9;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  background-size: cover;
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+/* line 187, ../sass/main.sass */
+.pumpkin h2 {
+  padding-top: 400px;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 70px;
+}
+/* line 192, ../sass/main.sass */
+.pumpkin p {
+  font-size: 22px;
+}
+/* line 194, ../sass/main.sass */
+.pumpkin button {
+  background-color: #491a37;
+  border: 1px solid transparent;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 202, ../sass/main.sass */
+.pumpkin button:hover {
+  background-color: #d95d4d;
+}
+
+/* line 205, ../sass/main.sass */
+.peas {
+  width: 100%;
+  min-height: 405px;
+  background: url("../img/peas.png") no-repeat #0cc4d9;
+  color: #fff;
+  text-align: left;
+  padding: 40px;
+  background-size: cover;
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+  margin-bottom: -1px;
+}
+/* line 216, ../sass/main.sass */
+.peas h2 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 70px;
+}
+/* line 220, ../sass/main.sass */
+.peas p {
+  font-size: 22px;
+}
+/* line 222, ../sass/main.sass */
+.peas button {
+  background-color: #3e67c9;
+  border: 1px solid transparent;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 230, ../sass/main.sass */
+.peas button:hover {
+  background-color: #5b79b8;
+}
+
+/* line 233, ../sass/main.sass */
+.find {
+  width: 100%;
+  min-height: 400px;
+  background: #636fe6;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  background-size: cover;
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+}
+/* line 244, ../sass/main.sass */
+.find p {
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 64px;
+}
+/* line 248, ../sass/main.sass */
+.find button {
+  background-color: #65d8b9;
+  border: 1px solid transparent;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 256, ../sass/main.sass */
+.find button:hover {
+  background-color: #e9d036;
+}
+/* line 258, ../sass/main.sass */
+.find span {
+  font-size: 16px;
+  margin-left: 10px;
+}
+/* line 261, ../sass/main.sass */
+.find li {
+  list-style: none;
+  margin-top: 10px;
+}
+.find>ul>li>input{
+  resize: none;
+  height: 28px;
+}
+/* line 264, ../sass/main.sass */
+.find li .left, .find li .right {
+  width: 20px;
+  height: 28px;
+  background-color: #fff;
+  display: inline-block;
+  margin-top: 2px;
+  vertical-align: bottom;
+  border: 1px solid transparent;
+}
+/* line 272, ../sass/main.sass */
+.find li .left {
+  border-radius: 12px 0px 0px 12px;
+}
+/* line 274, ../sass/main.sass */
+.find li .right {
+  border-radius: 0px 12px 12px 0px;
+}
+/* line 276, ../sass/main.sass */
+.find ul {
+  margin-left: -36px;
+  margin-top: 0;
+}
+/* line 279, ../sass/main.sass */
+.find .s_search {
+  border: none;
+  color: #b0b3c4;
+  font-size: 16px;
+  display: inline-block;
+  background-color: #fff;
+}
+/* line 285, ../sass/main.sass */
+.find .s_value {
+  vertical-align: bottom;
+}
+
+/* line 288, ../sass/main.sass */
+.chia {
+  width: 100%;
+  min-height: 400px;
+  background: url("../img/chia.png");
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  background-size: cover;
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+}
+/* line 299, ../sass/main.sass */
+.chia p {
+  font-size: 22px;
+  font-weight: 900;
+  margin-top: 64px;
+}
+/* line 303, ../sass/main.sass */
+.chia button {
+  background-color: #d95d4d;
+  border: 1px solid transparent;
+  font-size: 24px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 311, ../sass/main.sass */
+.chia button:hover {
+  background-color: #491a37;
+}
+
+/* line 314, ../sass/main.sass */
+.oliver {
+  width: 100%;
+  min-height: 600px;
+  background: url("../img/oliver.png") no-repeat #0cc4d9;
+  color: #b0b3c4;
+  text-align: left;
+  padding: 40px;
+  background-size: cover;
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+}
+/* line 325, ../sass/main.sass */
+.oliver h2 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 70px;
+}
+/* line 329, ../sass/main.sass */
+.oliver p {
+  font-size: 22px;
+}
+/* line 331, ../sass/main.sass */
+.oliver button {
+  background-color: #d95d4d;
+  border: 1px solid transparent;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 339, ../sass/main.sass */
+.oliver button:hover {
+  background-color: #491a37;
+}
+
+/* line 342, ../sass/main.sass */
+.twitter {
+  width: 100%;
+  min-height: 300px;
+  background: #00b1ed;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  background-size: cover;
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+}
+/* line 353, ../sass/main.sass */
+.twitter p {
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 64px;
+}
+/* line 357, ../sass/main.sass */
+.twitter button {
+  background-color: #72c8e6;
+  border: 1px solid transparent;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 365, ../sass/main.sass */
+.twitter button:hover {
+  background-color: #e9d036;
+}
+
+/* line 368, ../sass/main.sass */
+.fb {
+  width: 100%;
+  min-height: 300px;
+  background: #3b5a9a;
+  color: #fff;
+  text-align: center;
+  padding: 40px;
+  background-size: cover;
+  display: inline-block;
+  float: right;
+  vertical-align: top;
+}
+/* line 379, ../sass/main.sass */
+.fb p {
+  font-size: 32px;
+  font-weight: 900;
+  margin-top: 64px;
+}
+/* line 383, ../sass/main.sass */
+.fb button {
+  background-color: #5b79b8;
+  border: 1px solid transparent;
+  font-size: 22px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 391, ../sass/main.sass */
+.fb button:hover {
+  background-color: #3e67c9;
+}
+
+/* line 395, ../sass/main.sass */
+.copyright p {
+  font-size: 12px;
+  color: #b0b3c4;
+  text-align: center;
+  margin: 30px 0;
+}
+
+/* line 401, ../sass/main.sass */
+.demo {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+/* line 410, ../sass/main.sass */
+.demo .d_inner {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 30%;
+  left: 43%;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 50px;
+}
+/* line 419, ../sass/main.sass */
+.demo .d_inner p {
+  font-size: 48px;
+  color: #5b79b8;
+  margin-top: 38%;
+  text-align: center;
+  font-weight: 900;
+}

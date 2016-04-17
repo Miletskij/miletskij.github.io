@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Unicorn</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:0.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace, monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}a{color:#337ab7;text-decoration:none}a:hover,a:focus{color:#23527c;text-decoration:underline}a:focus{outline:thin dotted;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role="button"]{cursor:pointer}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}@media (min-width:768px){.container{width:750px}}@media (min-width:992px){.container{width:970px}}@media (min-width:1200px){.container{width:1170px}}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.row{margin-left:-15px;margin-right:-15px}.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:before,.clearfix:after,.container:before,.container:after,.container-fluid:before,.container-fluid:after,.row:before,.row:after{content:" ";display:table}.clearfix:after,.container:after,.container-fluid:after,.row:after{clear:both}.center-block{display:block;margin-left:auto;margin-right:auto}.pull-right{float:right !important}.pull-left{float:left !important}.hide{display:none !important}.show{display:block !important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none !important}.affix{position:fixed}@-ms-viewport{width:device-width}.visible-xs,.visible-sm,.visible-md,.visible-lg{display:none !important}.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block{display:none !important}@media (max-width:767px){.visible-xs{display:block !important}table.visible-xs{display:table}tr.visible-xs{display:table-row !important}th.visible-xs,td.visible-xs{display:table-cell !important}}@media (max-width:767px){.visible-xs-block{display:block !important}}@media (max-width:767px){.visible-xs-inline{display:inline !important}}@media (max-width:767px){.visible-xs-inline-block{display:inline-block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm{display:block !important}table.visible-sm{display:table}tr.visible-sm{display:table-row !important}th.visible-sm,td.visible-sm{display:table-cell !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-block{display:block !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline{display:inline !important}}@media (min-width:768px) and (max-width:991px){.visible-sm-inline-block{display:inline-block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md{display:block !important}table.visible-md{display:table}tr.visible-md{display:table-row !important}th.visible-md,td.visible-md{display:table-cell !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-block{display:block !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline{display:inline !important}}@media (min-width:992px) and (max-width:1199px){.visible-md-inline-block{display:inline-block !important}}@media (min-width:1200px){.visible-lg{display:block !important}table.visible-lg{display:table}tr.visible-lg{display:table-row !important}th.visible-lg,td.visible-lg{display:table-cell !important}}@media (min-width:1200px){.visible-lg-block{display:block !important}}@media (min-width:1200px){.visible-lg-inline{display:inline !important}}@media (min-width:1200px){.visible-lg-inline-block{display:inline-block !important}}@media (max-width:767px){.hidden-xs{display:none !important}}@media (min-width:768px) and (max-width:991px){.hidden-sm{display:none !important}}@media (min-width:992px) and (max-width:1199px){.hidden-md{display:none !important}}@media (min-width:1200px){.hidden-lg{display:none !important}}.visible-print{display:none !important}@media print{.visible-print{display:block !important}table.visible-print{display:table}tr.visible-print{display:table-row !important}th.visible-print,td.visible-print{display:table-cell !important}}.visible-print-block{display:none !important}@media print{.visible-print-block{display:block !important}}.visible-print-inline{display:none !important}@media print{.visible-print-inline{display:inline !important}}.visible-print-inline-block{display:none !important}@media print{.visible-print-inline-block{display:inline-block !important}}@media print{.hidden-print{display:none !important}}</style>
+
+	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
+	<style>
+		.mnuWrap,body{position:relative}.logo h1,.storyteller h2{font-weight:bolder}body{font-size:16px;min-width:320px;line-height:1.6;font-family:RobotoRegular,sans-serif;overflow-x:hidden;background:#fff}.logo h1,.menu ul li a,p{font-size:12px}header{background:url('img/header.png') no-repeat;background-size:cover}.logo{width:60px;float:left}p{line-height:25px}.mnuWrap{width:100%;height:20px}.menu{position:absolute;right:15px;display:none}.hamb,.menu ul li{display:inline-block}.menu ul{list-style:none;margin:0;padding:0}.menu ul li{padding-right:20px}.menu ul li a{text-transform:uppercase;text-decoration:none;color:#333}.hamb{height:10px;width:10px;float:right;margin-top:8px;margin-right:5px}.hamb .layer{height:2px;width:10px;background-color:#333;margin-top:2px}.storyteller{float:right;text-align:right;margin-top:300px;position:relative}.storyteller .underline{width:100px;height:3px;background-color:#333;float:right}.storyteller h2{text-transform:uppercase;font-size:48px;margin:0}.storyteller .story{margin-top:25px;margin-right:-100px;width:40%;float:right}button{margin-top:20px;background-color:transparent;border:2px solid #333;width:200px;height:40px;color:#333;font-size:12px;float:right}.mbb{padding-bottom:200px}.hidden{display:none}
+	</style>
+
+	<link rel="stylesheet" href="css/fonts.min.css">
+	<link rel="stylesheet" href="css/main.min.css">
+
+
+</head>
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="logo"><h1>UNICORN</h1></div>
+				<div class="mnuWrap">
+					<div class="hamb">
+						<div class="layer"></div>
+						<div class="layer"></div>
+						<div class="layer"></div>
+					</div>
+					<div class="menu">
+						<ul>
+							<li><a href="#">home</a></li>
+							<li><a href="#">about</a></li>
+							<li><a href="#">stories</a></li>
+							<li><a href="#">hello</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="storyteller">
+					<h2>storyteller</h2>
+					<div class="underline"></div>
+					<div class="story"><p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horible vermin. He lay on his armour-like back, and if he lifted his head  a litle he could see his brown belly, slightly domed and divided by arches into stiff sections.</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="row mbb"><div class="col-md-12"><button>read the rest</button></div></div>
+	</div>
+</header>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="waw">
+					<h3>Who & Why</h3>
+					<div class="wtext">
+						<p>The gentelmen who rented the room would sometimes take their evening meal at home in their living room that was used by everyone, and so the door to this room was often, kept closed in the evening. But Gregor found it easy to give up having a door open, he had, after all, often failed to make use of it when it was open and, without famiy having noticed it, lain in his room in its darkest corner. One time, though, the charwoman left the door.</p>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="bglight">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="feature">
+					<h4>An Wow Feature</h4>
+					<div class="ftext">
+						<p>The gentleman who rented the room would sometimes take their evening meal at home in the evening meal at home in the living.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature">
+					<h4>A Beautiful Feature</h4>
+					<div class="ftext">
+						<p>The gentleman who rented the room would sometimes take their evening meal at home in the evening meal at home in the living.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="feature">
+					<h4>An Amazing Feature</h4>
+					<div class="ftext">
+						<p>The gentleman who rented the room would sometimes take their evening meal at home in the evening meal at home in the living.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container wGal">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="waw">
+					<h3>Featured Articles</h3>
+					<div class="wtext">
+						<p>The gentelmen who rented the room would sometimes take their evening meal at home in their living room that was used by everyone, and so the door to this room was often, kept closed in the evening.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div id="carousel" class="carousel">
+						<button class="arrow left"></button>
+						<div class="gallery">
+							<ul class="cards">
+								<li id="cElem">
+									<div class="cWrap">
+										<div class="o_accent"></div>
+										<h5>comic</h5>
+										<div class="desc">
+											<p>A million ways to die in the wild wild wild west</p>
+										</div>
+										<div class="photo"></div>
+										<div class="pDesc">
+											<ul>
+												<li>jimmy jefferson</li>
+												<li>21/08/2013</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li id="cElem">
+									<div class="cWrap">
+										<div class="o_accent"></div>
+										<h5>comic</h5>
+										<div class="desc">
+											<p>A million ways to die in the wild wild wild west</p>
+										</div>
+										<div class="photo"></div>
+										<div class="pDesc">
+											<ul>
+												<li>jimmy jefferson</li>
+												<li>21/08/2013</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li id="cElem">
+									<div class="cWrap">
+										<div class="o_accent"></div>
+										<h5>comic</h5>
+										<div class="desc">
+											<p>A million ways to die in the wild wild wild west</p>
+										</div>
+										<div class="photo"></div>
+										<div class="pDesc">
+											<ul>
+												<li>jimmy jefferson</li>
+												<li>21/08/2013</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li id="cElem">
+									<div class="cWrap">
+										<div class="o_accent"></div>
+										<h5>comic</h5>
+										<div class="desc">
+											<p>A million ways to die in the wild wild wild west</p>
+										</div>
+										<div class="photo"></div>
+										<div class="pDesc">
+											<ul>
+												<li>jimmy jefferson</li>
+												<li>21/08/2013</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li id="cElem">
+									<div class="cWrap">
+										<div class="o_accent"></div>
+										<h5>comic</h5>
+										<div class="desc">
+											<p>A million ways to die in the wild wild wild west</p>
+										</div>
+										<div class="photo"></div>
+										<div class="pDesc">
+											<ul>
+												<li>jimmy jefferson</li>
+												<li>21/08/2013</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li id="cElem">
+									<div class="cWrap">
+										<div class="o_accent"></div>
+										<h5>comic</h5>
+										<div class="desc">
+											<p>A million ways to die in the wild wild wild west</p>
+										</div>
+										<div class="photo"></div>
+										<div class="pDesc">
+											<ul>
+												<li>jimmy jefferson</li>
+												<li>21/08/2013</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li id="cElem">
+									<div class="cWrap">
+										<div class="o_accent"></div>
+										<h5>comic</h5>
+										<div class="desc">
+											<p>A million ways to die in the wild wild wild west</p>
+										</div>
+										<div class="photo"></div>
+										<div class="pDesc">
+											<ul>
+												<li>jimmy jefferson</li>
+												<li>21/08/2013</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li id="cElem">
+									<div class="cWrap">
+										<div class="o_accent"></div>
+										<h5>comic</h5>
+										<div class="desc">
+											<p>A million ways to die in the wild wild wild west</p>
+										</div>
+										<div class="photo"></div>
+										<div class="pDesc">
+											<ul>
+												<li>jimmy jefferson</li>
+												<li>21/08/2013</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<button class="arrow right"></button>
+						</div>
+					</div>
+				</div>				
+			</div>
+
+		</div>
+	</div>
+</div>
+</section>
+<section class="bglight">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="clients">
+					<h3>Clients</h3>
+				</div>
+				<div class="imgs">
+					<ul>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="waw">
+					<h3>Portfolio & Screenshots</h3>
+					<div class="wtext">
+						<p>The gentelmen who rented the room would sometimes take their evening meal at home in their living room that was used by everyone, and so the door to this room was often, <br/>kept closed in the evening.</p>
+						<div class="STIunAct"></div>
+						<div class="mixitup" id="Container">
+							<ul>
+								<li><div class="filter active" data-filter="all">Art</div></li>
+								<li><div class="filter" data-filter=".category-1">Mystery</div></li>
+								<li><div class="filter" data-filter=".category-2">Illusion</div></li>
+								<li><div class="filter" data-filter=".category-3">Travel</div></li>
+							</ul>
+							
+							<div class="mix category-1"><img src="img/road.png" alt="#"></div>
+							<div class="mix category-2"><img src="img/jewels.png" alt="#"></div>
+							<div class="mix category-3"><img src="img/note.png" alt="#"></div>
+							<div class="mix category-1"><img src="img/jewels.png" alt="#"></div>
+						</div>
+
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="bgBlack">
+	<div class="waw">
+		<div class="blockquotes"></div>
+		<div class="wtext2">
+			<p>Happines cannot be traveled to, owned, earned, or worn. It is the spirtual experience of living every minute with love, grace & gratitude.</p>
+			<p><i>Denis Waitley</i></p>
+		</div>	
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="waw">
+					<h3>Team Members</h3>
+					<div class="wtext">
+						<p>The gentelmen who rented the room would sometimes take their evening meal at home in their living room that was used by everyone, and so the door to this room was often, kept closed in the evening.</p>
+					</div>	
+				</div>			
+			</div>
+		</div>
+		<div class="row">
+			<div class="members">
+				<div class="col-md-3">
+					<div class="face fOne"></div>
+					<div class="fDesc">
+						<h4>James Philly</h4>
+						<p>Lead Developer</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="face fTwo"></div>
+					<div class="fDesc">
+						<h4>Cactus Jack</h4>
+						<p>3D Model Designer</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="face fThree"></div>
+					<div class="fDesc">
+						<h4>Jack Sparrow</h4>
+						<p>Master of All Trade</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="face fFour"></div>
+					<div class="fDesc">
+						<h4>Yaga Quarehead</h4>
+						<p>Manages Money</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bgBlack">
+		<div class="container">
+			<div class="fanu">
+				<div class="row ">
+					<div class="col-md-12">
+						<h4>Facts & Numbers</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="stat">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="stInner">
+										<div class="STInumb">
+											<h4>110</h4>
+										</div>
+										<div class="STIunderl"></div>
+										<div class="STIdescr">
+											<p>succesful projects</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="stInner">
+										<div class="STInumb">
+											<h4>25</h4>
+										</div>
+										<div class="STIunderl"></div>
+										<div class="STIdescr">
+											<p>awesome clients</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="stInner">
+										<div class="STInumb">
+											<h4>30</h4>
+										</div>
+										<div class="STIunderl"></div>
+										<div class="STIdescr">
+											<p>open source plugins</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="stInner">
+										<div class="STInumb">
+											<h4>13</h4>
+										</div>
+										<div class="STIunderl"></div>
+										<div class="STIdescr">
+											<p>open source themes</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row"><div class="col-md-12"><div class="STIunAct"></div></div></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row ">
+				<div class="col-md-6">
+					<div class="chessText">
+						<p class="smaller">Travel / 21st March, 2014</p>
+						<h4>A New Product Is Coming</h4>
+						<p>The office assistant was the boss's man, spineless, and with no undertanding.What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="ChImg lense"></div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-md-6">
+					<div class="ChImg gpad"></div>
+				</div>
+				<div class="col-md-6">
+					<div class="chessText">
+						<p class="smaller">Travel / 21st March, 2014</p>
+						<h4>A New Product Is Coming</h4>
+						<p>The office assistant was the boss's man, spineless, and with no undertanding.What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-md-6">
+					<div class="chessText">
+						<p class="smaller">Travel / 21st March, 2014</p>
+						<h4>A New Product Is Coming</h4>
+						<p>The office assistant was the boss's man, spineless, and with no undertanding.What about if he reported sick? But that would be extremely strained and suspicious as in fifteen years of service Gregor had never.</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="ChImg tea"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bglight">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="diaries">
+						<div class="vertLine"></div>	
+						<h5>Another Day In Paradise</h5>
+						<p class="smaller">Travel / 21st March, 2014</p>
+					</div>
+
+				</div>
+				<div class="col-md-4">
+					<div class="diaries">
+						<div class="vertLine"></div>	
+						<h5>Another Day In Paradise</h5>
+						<p class="smaller">Travel / 21st March, 2014</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="diaries">
+						<div class="vertLine"></div>	
+						<h5>Another Day In Paradise</h5>
+						<p class="smaller">Travel / 21st March, 2014</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="waw">
+						<div class="tweet"></div>
+						<div class="lovPhoto"></div>
+						<p class="lles">Happines cannot be traveled to, owned, earned, or worn. It is the spirtual experience of living every minute with love, grace & gratitude.</p>
+						<h5>@loveless</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="bgBlack">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 fUnder">
+					<div class="row">
+						<div class="col-md-5">
+							<h5 class="fTitle">UNICORN</h5>
+							<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horible vermin. He lay on his armour-like back.</p>
+							<div class="email"><textarea name="email1" id="email" cols="23" rows="1" placeholder="EMAIL"></textarea></div>
+							<div class="subject"><textarea name="subject1" id="subject" cols="23" rows="1" placeholder="SUBJECT"></textarea></div>
+							<div class="message"><textarea name="message1" id="message" cols="56" rows="1" placeholder="MESSAGE"></textarea></div>
+							<div class="sInfo"><button>SEND></button></div>
+						</div>
+						<div class="col-md-7"><div class="row">
+						<div class="col-md-3"></div>
+							<div class="col-md-3">
+								<div class="links">
+									<h6>links</h6>
+									<ul>
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Services</a></li>
+										<li><a href="#">Menu</a></li>
+										<li><a href="#">Restaurants</a></li>
+										<li><a href="#">Work Hours</a></li>
+										<li><a href="#">Call Hours</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="links">
+									<h6>friends</h6>
+									<ul>
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About</a></li>
+										<li><a href="#">Services</a></li>
+										<li><a href="#">Menu</a></li>
+										<li><a href="#">Restaurants</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="links">
+									<h6>social</h6>
+									<ul>
+										<li><a href="#">Facebook</a></li>
+										<li><a href="#">Twitter</a></li>
+										<li><a href="#">GitHub</a></li>
+										<li><a href="#">Pinterest</a></li>
+										<li><a href="#">Google Plus</a></li>
+										<li><a href="#">Dribble</a></li>
+										<li><a href="#">Flikr</a></li>
+										<li><a href="#">Others</a></li>
+									</ul>
+								</div>
+							</div>
+						</div></div></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+					<div class="fleft">
+						<p>One morning, when Gregor Samsa woke from troubled dreams, he found</p>
+						<p>&copy; Your Awesome Company</p>
+					</div>
+					</div>
+					<div class="col-md-6">
+						<div class="lLinks">
+							<ul>
+								<li><a href="">terms</a></li>
+								<li><a href="">privacy policy</a></li>
+								<li><a href="">contact</a></li>
+								<li><a href="">job</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<body>
+
+
+		<div class="hidden"></div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+
+	<script src="js/libs.js"></script>
+	<script src="js/common.js"></script>
+	<script src="libs/mixitup/jquery.mixitup.min.js"></script>
+
+</body>
+</html>
