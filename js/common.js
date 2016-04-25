@@ -26,7 +26,6 @@ $('.js-scrolltoid').scrollToID({
   offset: 30   //in pixels
 });
 
-$(".menuInner").hide();
 	$(".menu").click(function(){
 		$(".menuInner").fadeIn();
 	});

@@ -38,12 +38,13 @@
 						<div class="sTitle"><h3>Обо мне</h3></div>
 						<div class="sDesc">
 							<div class="sFoto"></div>
-							<div class="sText"><p>Добрый день, меня зовут Алексей и с 2015 года я занимаюсь вёрсткой и фронт-энд разработкой. Это и моя работа, и хобби. На данном сайте представлено моё скромное портфолио и контакты.</p><p>Ключевые навыки: HTML, CSS(Sass), JavaScript, JQuery. А так же: навыки семантической верстки, блочной верстки, табличной верстки, базовые навыки SEO. Нарезка макетов и дизайн: Adobe Photoshop, Inkscape.</p> <p>Разработка как под ОС Windows, так и под Linux Ubuntu.</p><p>Сборка: Gulp. </p></div>
+							<div class="sText"><p>Добрый день, меня зовут Алексей и с 2015 года я занимаюсь вёрсткой и фронт-энд разработкой. Это и моя работа, и хобби. На данном сайте представлено моё скромное портфолио и контакты.</p><p>Ключевые навыки: HTML, CSS(Sass), JavaScript, Jquery. А так же: навыки семантической верстки, блочной верстки, табличной верстки, базовые навыки SEO. Нарезка макетов и дизайн: Adobe Photoshop, Inkscape.</p> <p>Разработка как под ОС Windows, так и под Linux Ubuntu.</p><p>Сборка: Gulp. </p></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="tri"></div>
 		<div class="dark" id="Port">
 			<div class="sectionMr">
 				<div class="sect">
@@ -60,11 +61,11 @@
 							</div>
 							<div class="gallery">
 								<div id="Container">
-									<div class="mix category-1"> <a href="Done/FoodMagazine/index.html" target="_blank"><img src="img/food.png" alt="FoogMagazine"></a> </div>
-									<div class="mix category-1"> <a href="Done/Unicorn/index.html" target="_blank"><img src="img/unicorn.png" alt="Unicorn"></a> </div>
-									<div class="mix category-2 category-3"> <a href="Done/Warmax/index.html" target="_blank"><img src="img/war.png" alt="Warmax"></a> </div>
-									<div class="mix category-1"> <a href="Done/whitesquare/index.html" target="_blank"><img src="img/white.png" alt="Whitesquare"></a> </div>
-									<div class="mix category-2 category-3"> <a href="http://milenbrit.ru/" target="_blank"><img src="img/mil.png" alt="Milenbrit"></a> </div>
+									<div class="mix category-1"> <a href="Done/FoodMagazine/index.html"><img src="img/food.png" alt="FoogMagazine"></a> </div>
+									<div class="mix category-1"> <a href="Done/Unicorn/index.html"><img src="img/unicorn.png" alt="Unicorn"></a> </div>
+									<div class="mix category-2 category-3"> <a href="Done/Warmax/index.html"><img src="img/war.png" alt="Warmax"></a> </div>
+									<div class="mix category-1"> <a href="Done/whitesquare/index.html"><img src="img/white.png" alt="Whitesquare"></a> </div>
+									<div class="mix category-2 category-3"> <a href="http://milenbrit.ru/"><img src="img/mil.png" alt="Milenbrit"></a> </div>
 								</div>
 							</div>
 						</div>
@@ -72,6 +73,7 @@
 				</div>
 			</div>
 		</div>
+		<div class="trid"></div>
 		<div class="light" id="Cont">
 			<div class="sectionMr">
 				<div class="sect">
@@ -81,25 +83,33 @@
 							<div class="contacts">
 								<ul>
 									<li><i class="fa fa-phone"></i><a href="tel:+7 (904) 614 89 89">+7 (904) 614 89 89</a></li>
-									<li><i class="fa fa-envelope-o"></i><a href="mailto:a.miletskii@ya.ru">Связаться по электронной почте</a></li>
-								</ul>
-							</div>
+									<li><i class="fa fa-envelope-o"></i>
+										<form action="https://formspree.io/a.miletskii@ya.ru"	method="POST" class="form">
+										<ul>
+											<li><input type="text" name="name" placeholder="Ваше имя" class="name"><input type="submit" value="Отправить" class="send"></li>
+											<li><textarea type="email" name="_replyto" placeholder="Сообщение" class="message" rows="10"></textarea></li>
+										</ul>										
+									</form> 
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</main>
-	<footer class="dark">
-		<div class="sectionMr">
-			<div class="sect">
-				<div class="wrap">
+	</div>
+	<div class="tris"></div>
+</main>
+<footer class="dark">
+	<div class="sectionMr">
+		<div class="sect">
+			<div class="wrap">
 				<div class="copy"><p>&copy; AM Design 2016</p></div>
-				</div>
 			</div>
 		</div>
-	</footer>
-	<script src="js/libs.min.js"></script>
-	<script src="js/common.js"></script>
+	</div>
+</footer>
+<script src="js/libs.min.js"></script>
+<script src="js/common.js"></script>
 </body>
 </html>
